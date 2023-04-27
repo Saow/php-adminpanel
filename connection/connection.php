@@ -5,10 +5,10 @@ if(!isset($_SESSION['username'])) {
 }
 
 // Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "admin_panel";
+$servername = "sql202.byethost3.com";
+$username = "b3_34089324";
+$password = "pnGR^8Pw08@R";
+$dbname = "b3_34089324_admin_panel";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
