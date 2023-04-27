@@ -1,47 +1,45 @@
 <?php
-require ('../connection/connection.php')
+require_once('connection/connection.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analytics</title>
+    <title>Admin Panel</title>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.24.0/dist/apexcharts.min.js"></script>
-    <link rel="stylesheet" href="../style1.css">
-    <link rel="stylesheet" href="../sidebar.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script defer src="../settings/settings.js"></script>
-    <link rel="stylesheet" href="../settings/settings.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <script defer src="settings/settings.js"></script>
+    <link rel="stylesheet" href="settings/settings.css">
 </head>
 <body>
-<div class="sidebar">
+    <h1>Welcome to the Admin Panel</h1>
+    <div class="sidebar">
     <ul class="nav-list">
       <li>
-        <a href="../index.php">
+        <a href="index.php">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="../customers.php">
+       <a href="customers.php">
          <i class='bx bx-user' ></i>
          <span class="links_name">Customers</span>
        </a>
        <span class="tooltip">Customers</span>
      </li>
      <li>
-       <a href="analytics.php">
+       <a href="analytics/analytics.php">
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Analytics</span>
        </a>
        <span class="tooltip">Analytics</span>
      </li>
      <li>
-       <a href="../orders.php">
+       <a href="orders.php">
          <i class='bx bx-cart-alt' ></i>
          <span class="links_name">Orders</span>
        </a>
@@ -74,5 +72,12 @@ require ('../connection/connection.php')
 </div>
 </div>
 </div>
+
 </body>
 </html>
+
+<?php
+require_once ('./handlers/logout.php')
+?>
+
+ 

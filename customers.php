@@ -37,14 +37,14 @@ if (isset($_POST['edit_customer_id']) && isset($_POST['edit_customer_name']) && 
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="sidebar.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <script defer src="settings.js"></script>
-    <link rel="stylesheet" href="settings.css">
+    <script defer src="settings/settings.js"></script>
+    <link rel="stylesheet" href="settings/settings.css">
 </head>
 <body>
 <div class="sidebar">
     <ul class="nav-list">
       <li>
-        <a href="admin.php">
+        <a href="index.php">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
@@ -82,8 +82,11 @@ if (isset($_POST['edit_customer_id']) && isset($_POST['edit_customer_name']) && 
      </li>
     </ul>
   </div>
-  <div id="settings-popup" class="popup">
+<div id="settings-popup" class="popup">
   <h2>Settings</h2>
+  <form method="post" class="logoutbtn">
+      <input method="post" type="submit" name="log_out" id="logout" value="Log Out">
+    </form>
   <div class="toggle-and-button-container">
     <span class="btntext">Switch to Dark Mode:</span>
     <div class="dark-mode-toggle">
@@ -92,6 +95,8 @@ if (isset($_POST['edit_customer_id']) && isset($_POST['edit_customer_name']) && 
     </div>
     <button id="close-btn">Close</button>
   </div>
+</div>
+</div>
 </div>
 </body>
 </html>
