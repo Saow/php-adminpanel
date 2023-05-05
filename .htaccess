@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^admin?$ index.php
+RewriteRule ^customers?$ customers.php
+RewriteRule ^login?$ login.php
+RewriteRule ^stats?$ stats.php
+RewriteRule ^orders?$ orders.php
+RewriteRule ^connection?$ connection.php

@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['username'])) {
-    header("Location: index.php");
+    header("Location: /admin");
 }
 
 if(isset($_POST['username']) && isset($_POST['password'])) {
@@ -27,7 +27,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
     if (mysqli_num_rows($result) > 0) {
         // User authenticated successfully
         $_SESSION['username'] = $username;
-        header("Location: index.php");
+        header("Location: /admin");
     } else {
         // Invalid username or password
         $message = "Invalid username or password.";
@@ -35,6 +35,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 
     mysqli_close($conn);
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,29 +52,29 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 
 <div class="sidebar">
     <ul class="nav-list">
-      <li>
-        <a href="index.php">
+    <li>
+        <a href="/admin">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="customers.php">
+       <a href="/customers">
          <i class='bx bx-user' ></i>
          <span class="links_name">Customers</span>
        </a>
        <span class="tooltip">Customers</span>
      </li>
      <li>
-       <a href="analytics/analytics.php">
+       <a href="/stats">
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Analytics</span>
        </a>
        <span class="tooltip">Analytics</span>
      </li>
      <li>
-       <a href="orders.php">
+       <a href="/orders">
          <i class='bx bx-cart-alt' ></i>
          <span class="links_name">Orders</span>
        </a>

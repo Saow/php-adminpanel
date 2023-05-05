@@ -1,7 +1,6 @@
 <?php
 require_once('connection/connection.php');
 
-
 // Delete customer from database
 if (isset($_GET['delete_customer_id'])) {
     $delete_customer_id = $_GET['delete_customer_id'];
@@ -43,29 +42,29 @@ if (isset($_POST['edit_customer_id']) && isset($_POST['edit_customer_name']) && 
 <body>
 <div class="sidebar">
     <ul class="nav-list">
-      <li>
-        <a href="index.php">
+    <li>
+        <a href="/admin">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="customers.php">
+       <a href="/customers">
          <i class='bx bx-user' ></i>
          <span class="links_name">Customers</span>
        </a>
        <span class="tooltip">Customers</span>
      </li>
      <li>
-       <a href="analytics/analytics.php">
+       <a href="/stats">
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Analytics</span>
        </a>
        <span class="tooltip">Analytics</span>
      </li>
      <li>
-       <a href="orders.php">
+       <a href="/orders">
          <i class='bx bx-cart-alt' ></i>
          <span class="links_name">Orders</span>
        </a>
@@ -82,6 +81,20 @@ if (isset($_POST['edit_customer_id']) && isset($_POST['edit_customer_name']) && 
      </li>
     </ul>
   </div>
+<div id="settings-popup" class="popup">
+  <h2>Settings</h2>
+  <form method="post" class="logoutbtn">
+      <input method="post" type="submit" name="log_out" id="logout" value="Log Out">
+    </form>
+  <div class="toggle-and-button-container">
+    <span class="btntext">Switch to Dark Mode:</span>
+    <div class="dark-mode-toggle">
+      <input type="checkbox" id="dark-mode-toggle" />
+      <label for="dark-mode-toggle"></label>
+    </div>
+    <button id="close-btn">Close</button>
+  </div>
+</div>
 <div id="settings-popup" class="popup">
   <h2>Settings</h2>
   <form method="post" class="logoutbtn">

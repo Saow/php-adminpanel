@@ -1,5 +1,5 @@
 <?php
-require_once('connection/connection.php');
+require ('connection/connection.php')
 ?>
 
 <!DOCTYPE html>
@@ -19,29 +19,29 @@ require_once('connection/connection.php');
 <body>
 <div class="sidebar">
     <ul class="nav-list">
-      <li>
-        <a href="index.php">
+    <li>
+        <a href="/admin">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
         </a>
          <span class="tooltip">Dashboard</span>
       </li>
       <li>
-       <a href="customers.php">
+       <a href="/customers">
          <i class='bx bx-user' ></i>
          <span class="links_name">Customers</span>
        </a>
        <span class="tooltip">Customers</span>
      </li>
      <li>
-       <a href="analytics/analytics.php">
+       <a href="/stats">
          <i class='bx bx-pie-chart-alt-2' ></i>
          <span class="links_name">Analytics</span>
        </a>
        <span class="tooltip">Analytics</span>
      </li>
      <li>
-       <a href="orders.php">
+       <a href="/orders">
          <i class='bx bx-cart-alt' ></i>
          <span class="links_name">Orders</span>
        </a>
@@ -230,4 +230,8 @@ if ($result->num_rows > 0) {
     }
 }
 
+?>
+
+<?php
+require_once ('handlers/logout.php')
 ?>

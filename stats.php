@@ -1,24 +1,26 @@
 <?php
-require_once('connection/connection.php');
-require_once ('./handlers/logout.php')
+require ('connection/connection.php')
+require ('/handlers/logout.php')
 ?>
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Admin Panel</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics</title>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.24.0/dist/apexcharts.min.js"></script>
+    <link rel="stylesheet" href="../style1.css">
+    <link rel="stylesheet" href="../sidebar.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style1.css">
-    <link rel="stylesheet" href="sidebar.css">
-    <script defer src="settings/settings.js"></script>
-    <link rel="stylesheet" href="settings/settings.css">
+    <script defer src="../settings/settings.js"></script>
+    <link rel="stylesheet" href="../settings/settings.css">
 </head>
 <body>
-    <h1>Welcome to the Admin Panel</h1>
-    <div class="sidebar">
+<div class="sidebar">
     <ul class="nav-list">
-      <li>
+    <li>
         <a href="/admin">
           <i class='bx bx-grid-alt'></i>
           <span class="links_name">Dashboard</span>
